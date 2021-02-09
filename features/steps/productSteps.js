@@ -24,8 +24,7 @@ Then('we should receive', async function (dataTable) {
         assert.equal(description, `Description: ${expectations[i].description}`);
     }
 });
-/*
+
 After(async function() {
     this.driver.close();
 });
-*/
