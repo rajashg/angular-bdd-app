@@ -4,7 +4,8 @@ const { Builder, By, until } = require('selenium-webdriver');
  
 When('we request the products list', async function () {
     this.driver = new Builder()
-        .forBrowser('chrome')
+        //.forBrowser('chrome')
+        .forBrowser('firefox')
         .build();
  
     this.driver.wait(until.elementLocated(By.tagName('h1')));
@@ -23,7 +24,8 @@ Then('we should receive', async function (dataTable) {
         assert.equal(description, `Description: ${expectations[i].description}`);
     }
 });
-
+/*
 After(async function() {
     this.driver.close();
 });
+*/
